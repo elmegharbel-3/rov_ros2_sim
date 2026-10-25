@@ -1,0 +1,15 @@
+# ROS 2 Build & Workspace Folders
+build/
+install/
+log/
+
+# Python compiled files
+__pycache__/
+*.pyc
+*.py[cod]
+
+# IDEs and OS metadata
+.vscode/
+.idea/
+.DS_Store
+*.swp
