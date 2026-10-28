@@ -13,10 +13,10 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='marwan',
+    maintainer='elmegharbel',
     maintainer_email='marwanelmegharbel@gmail.com',
-    description='TODO: Package description',
-    license='TODO: License declaration',
+    description='.',
+    license='Apache-2.0',
     extras_require={
         'test': [
             'pytest',
@@ -24,6 +24,9 @@ setup(
     },
     entry_points={
         'console_scripts': [
+	    'teleop_node = rov_control.teleop_node:main',
+	    'control_mux_node = rov_control.control_mux_node:main',
+        'pid_control_node = rov_control.pid_control_node:main'
         ],
     },
 )
