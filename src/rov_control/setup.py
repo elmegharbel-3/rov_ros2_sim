@@ -26,7 +26,8 @@ setup(
         'console_scripts': [
 	    'teleop_node = rov_control.teleop_node:main',
 	    'control_mux_node = rov_control.control_mux_node:main',
-        'pid_control_node = rov_control.pid_control_node:main'
+        'pid_control_node = rov_control.pid_control_node:main',
+        'tam_node = rov_control.tam_node:main',
         ],
     },
 )

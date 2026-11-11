@@ -4,7 +4,7 @@ from geometry_msgs.msg import Wrench
 from sensor_msgs.msg import Imu
 from std_msgs.msg import Float32,String
 
-class pid_control_node(Node):
+class PidControlNode(Node):
     def __init__(self):
         super().__init__('pid_control_node')
 
@@ -81,7 +81,7 @@ class pid_control_node(Node):
         self.current_mode = msg.data.upper()
 def main(args=None):
     rclpy.init(args=args)
-    node = pid_control_node()
+    node = PidControlNode()
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()
