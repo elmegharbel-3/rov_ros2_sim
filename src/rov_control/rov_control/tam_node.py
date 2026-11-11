@@ -1,6 +1,5 @@
 import rclpy
 from rclpy import Node
-import rclpy
 from geometry_msgs.msg import Wrench
 from std_msgs.msg import Float32MultiArray
 

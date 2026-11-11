@@ -28,6 +28,7 @@ setup(
 	    'control_mux_node = rov_control.control_mux_node:main',
         'pid_control_node = rov_control.pid_control_node:main',
         'tam_node = rov_control.tam_node:main',
+        'mock_serial_node = rov_control.mock_serial_node:main'
         ],
     },
 )
