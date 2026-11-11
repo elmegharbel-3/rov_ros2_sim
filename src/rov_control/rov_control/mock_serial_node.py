@@ -1,14 +1,14 @@
 import rclpy
 import math
-from rclpy import Node
+from rclpy.node import Node
 from sensor_msgs.msg import Imu
 from std_msgs.msg import Float32,Float32MultiArray
 from geometry_msgs.msg import Quaternion
 
 
 class MockSerial(Node):
-    super.__init__("mock_serial_node")
-    def __init__(self):
+    def __init__(self): 
+        super().__init__("mock_serial_node")
         self.current_depth = Float32()
         self.current_imu = Imu()
         self.motors_cmd_sub = self.create_subscription(

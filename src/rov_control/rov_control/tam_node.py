@@ -1,5 +1,5 @@
 import rclpy
-from rclpy import Node
+from rclpy.node import Node
 from geometry_msgs.msg import Wrench
 from std_msgs.msg import Float32MultiArray
 
@@ -19,8 +19,10 @@ class TamNode(Node):
             10
         )
     def allocated_wrench_callback(self,msg:Wrench):
+        self.allocated_wrench = Wrench()
+        self.wrench_list = Float32MultiArray()
         self.allocated_wrench = msg
-        self.wrench_list = [
+        self.wrench_list.data = [
             self.allocated_wrench.force.x,
             self.allocated_wrench.force.y,
             self.allocated_wrench.force.z,
@@ -30,7 +32,7 @@ class TamNode(Node):
             ]
         # allocation matrix code here -->
 
-        self.motors_cmd_pub.publish(self.wrench)
+        self.motors_cmd_pub.publish(self.wrench_list)
 
 def main(args=None):
     rclpy.init(args=args)
